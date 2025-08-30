@@ -21,4 +21,17 @@ $(document).ready(function(){
     //     });
     // },6000);
 
+
+    $(".gnb > li").mouseover(function () {
+    // $(".gnb > li > .mega").stop().slideDown("fast");
+    $(this).find(".mega").stop().slideDown("fast");
+    console.log("mouseover");
+  });
+
+  $(".gnb > li").mouseout(function () {
+    // $(".gnb > li > .mega").stop().slideUp("fast");
+    $(this).find(".mega").stop().slideUp("fast");
+    console.log("mouseout");
+  });
+
 });
