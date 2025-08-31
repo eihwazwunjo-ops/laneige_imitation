@@ -82,26 +82,20 @@ header{ position: relative; }
 .mega_links_meun{margin:0; padding:0;}
 main .frame{
     width: 100%; /*배너크기*/
+    flex: 0 0 100%;
     /* position: relative; */
+    /* overflow: hidden; */
+    
+}
+main .slide{
+    display: flex;
+    position: relative;
     overflow: hidden;
     
 }
-main .frame .imgbox{
-    display: flex;
+.imgbox{
+    position: relative;
 }
-/* main .frame .imgbox .set{
-    flex: 0 0 100%;
-} */
- main .frame .imgbox img{
-    flex: 0 0 100%;
-}
-
-/* main .frame .imgbox .set img{
-    display:block;
-    width:1871px;
-    height:auto;
-    margin-top: 50px;
-} */
 
 /* main .frame .imgbox img{
     display:block;
@@ -116,50 +110,110 @@ main .frame .imgbox img{
     height:auto;
     margin-top: 50px;
 }
-
-
+.text-box{
+    position: absolute;
+    top: 29%;
+    width: 790px;
+    margin: 0 40px;
+}
+.text-title{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.text-sub-title{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.readmore{
+    border: 1px solid #333;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 10px;
+}
+.readmore:hover{
+    background: #fff;
+    transition: all 1s;
+}
+/* 베스트셀러 영역 */
 .best-set{
     height: 1000px;
+    position: relative;
 }
 .best-set-group{
     width: 100%;
 }
-.best-img, .best-img2{
-    width: 50%;
+.best-img, .best-img2{/*1*/
+    /* width: 50%; */
+    flex: 0 0 50%;   /*<grow> <shrink> <basis>*/
+    min-width: 0;    
+}
+.best-img2{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.best-img2 .group {
+    display: flex;
+    width: 100%;/*4*/
 }
 
 
-
+.best-box p ,.best-box .best-text{
+    position: absolute;
+    letter-spacing : 2.05px;
+}
+.best-box .best-text{
+    top: 67%;
+    font-size: 30px;
+}
+.best-box p{
+    top: 71%; left: 10%;
+    font-size: 60px; color: #f8f5fc;
+    font-weight: bold;
+}
 /* section .best-img img{
     width: 953px;
     height: 911px;
     position: absolute;
 } */
- section .best-img img{
+
+
+/* section .best-img img{
     width: 50%;
     height: 911px;
     position: absolute;
+} */
+.best-img .best-box img{/*2*/
+    display:block;
+    width:100%;
+    height:auto;    
+    object-fit:cover;  /*(부모가 비율이 있을 때)*/
 }
-section .best-img2 img{
-    width: 360px;
-    height: 432px;
+
+/* 베스트 상품 영역 */
+.best-set-group{
+    display: flex; 
+    
 }
 .group img{
-    position: absolute;top: 343px;
-    justify-self: anchor-center;
+    margin: 0 auto;
+    display: block;
 }
 .best-set h2,.new-set h2{
     font-size: 40px;
     margin: 80px 20px 30px 35px;
 }
 
-.cor-box-size {
-    width: 50%;
-    height: 911px;
-    position: absolute;
-    right: 0;
+.cor-box-size { /*3*/
+    /* width: 50%; */
+    /* height: 911px; */
+    /* flex: 0 0 44%; */
+    flex: 0 0 100%; 
+   /* 가운데 정렬 */
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center; 
+    text-align:center;
 }
-
 .cor-box1-color {background-color: #F0F6FE;}
 .cor-box2-color {background-color: #EDF2FA;}
 .cor-box3-color {background-color: #EBF6F5;}
