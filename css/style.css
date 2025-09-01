@@ -61,12 +61,12 @@ header{ position: relative; }
   display:grid; gap:48px;
   
 }
-.mega_links_repeat3{
+/* .mega_links_repeat3{
    grid-template-columns:repeat(3,1fr);
 }
 .mega_links_repeat2{
     grid-template-columns:repeat(2,1fr); 
-}
+} */
 .mega_title{
   font-size:15px; font-weight:700; margin:0 0 12px;
   padding-bottom:10px; border-bottom:2px solid #222;
@@ -86,6 +86,36 @@ main .frame{
     /* position: relative; */
     /* overflow: hidden; */
     
+}
+
+.mega_inner.mega_with_image.mega_links_repeat3 { 
+  grid-template-columns: 1fr 1fr 1fr 320px; /* 3열 + 이미지 1열 */
+}
+.mega_inner.mega_with_image.mega_links_repeat2 { 
+  grid-template-columns: 1fr 1fr 320px;     /* 2열 + 이미지 1열 */
+}
+
+/* 오른쪽 프로모션 사진 */
+.mega_promo{
+  justify-self: end;  /* 오른쪽 정렬 */
+  align-self: start;
+  padding-left: 24px;
+}
+.mega_promo img{
+  width: 280px; 
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;
+}
+.promo_badge{
+  font-size: 12px;
+  color: #2a62ff;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.promo_name{
+  font-size: 14px;
+  color: #111;
 }
 main .slide{
     display: flex;
