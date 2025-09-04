@@ -118,13 +118,26 @@ main .frame{
   color: #111;
 }
 main .slide{
-    display: flex;
+    /* display: flex; */
     position: relative;
     overflow: hidden;
     
 }
+main .frame{
+  width: 100%;
+  flex: 0 0 100%;
+  position: relative;
+  overflow: hidden;
+  height: 700px;  
+}
+.slide .slide-track{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 0;
+}
 .imgbox{
-    position: relative;
+   position: absolute;
+  inset: 0;
 }
 
 /* main .frame .imgbox img{
@@ -135,10 +148,24 @@ main .slide{
 } */
 
 main .frame .imgbox img{
-    display:block;
-    width:100%;
-    height:auto;
-    margin-top: 50px;
+    width: 100%;
+  height: 100%;              /* 세로도 프레임에 맞게 */
+  object-fit: cover;         /* 프레임 꽉 채우면서 비율 유지 */
+  object-position: right center; /* 제품 오른쪽에 보이게 */
+}
+.best-img2 .group{
+  display: flex;
+  flex-wrap: nowrap;
+  width: calc(100% * 6); /* 아이템이 6개이므로 6배 */
+  margin-left: 0;
+}
+
+/* 2) 제품 이미지 크기 안정화 */
+.best-img2 .cor-box-size img{
+  display: block;
+  max-width: 80%;
+  width: 420px;       /* 원하면 380~480px 등으로 조절 */
+  height: auto;
 }
 .text-box{
     position: absolute;

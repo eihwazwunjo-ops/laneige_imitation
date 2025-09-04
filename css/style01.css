@@ -126,9 +126,7 @@ main .slide{
 .imgbox{
   position: relative;
 }
-
 .intro_inner{
-  width: 1200px;
   margin: 0 auto;
   padding: 40px 60px;
   height: 500px;
@@ -161,10 +159,13 @@ main .slide{
   font-weight: 400;
   line-height: 3;
 }
-.cont-wrap,.collab-cont-wrap {
-  width: 1200px;
+.cont-wrap {
+  width: 1440px;
   margin: 0 auto;
+  padding-left: 64px;
+  padding-right: 64px;
   position: relative;
+  margin-top: 85px;
 }
 .wrap-box{
   float: left;
@@ -172,19 +173,18 @@ main .slide{
 .img-box:nth-child(1){
   margin-right: 30px;
 }
+.collab-img-box, .collab-post-image-box,
 .img-box, .post-image-box{
   border: 13px solid #fff;
   box-shadow: 1px 1px 40.5px 9.5px rgba(152,152,152,.3);
-}
-.title-box{
-  margin-top: 100px;
 }
 .poster-wrap{
   display: flex;
   margin-top: 85px;
 }
 .post-image-box{
-  margin-left: 20px;
+  margin-right: 20px;
+  /* margin-top: 40px; */
 }
 .title-wrap span{
   font-size: 40px;
@@ -192,19 +192,16 @@ main .slide{
 .title-wrap h2{
   font-size: 50px;
 }
-.desc-text{
+.desc-text, .collab-desc-text{
   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  width: 1300px;
 }
 .desc-text a{
-  /* float: right; */
+  float: right;
   border: 1px solid #333;
-  padding: 20px 50px;
+  padding: 10px 30px;
   margin-top: 20px;
 }
+.collab-desc-text a:hover,
 .desc-text a:hover{
   background: #333;
   color: #fff;
@@ -212,66 +209,92 @@ main .slide{
 }
 .desc-text p{
   font-size: 20px;
-  color: #333;
   display: inline-block;
 }
 .bg{
-  position: absolute; top: -34%; left: -29%; z-index: -1;
+  position: absolute; top: -34%; left: -16%; z-index: -1;
 }
 .deco{
   position: absolute;
 }
 .deco-purple{
   top: 37%;
-  left: -22%;
+  left: -16%;
 }
 .deco-blue{
-  top: -32%;
-  left: 93%;
+  top: -30%;
+  right: -96px;
 }
 
-.collab-cont-wrap{
-  position: relative;
+
+.collab-cont-wrap{ 
+  position: relative; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  /* padding: 0 40px;  */
+  display: grid; 
+  grid-template-columns: 1.1fr 1fr; 
+  /* column-gap: 32px;  */
+  /* row-gap: 24px;  */
+  /* align-items: start;  */
+  margin-top: 250px; 
+} 
+.collab-poster-wrap{ 
+  display: flex; 
+  gap: 30px; 
+  margin-top: 94px; 
+} 
+.collab-title-wrap{ 
+  text-align: right;
+  margin-top: 33px; 
+  color: #fff; 
+}
+.collab-img-box{
+  margin-left: 20px;
+}
+.collab-title-wrap span{ 
+  font-size: 30px; 
+  margin-top: 20px; 
+} 
+.collab-title-wrap h2{ 
+  font-size: 50px; 
+} 
+.collab-bg{ 
+  position: absolute;top: -19%; left: -30%; z-index: -1; 
+} 
+.collab-desc-box{
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
-
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  column-gap: 32px;
-  row-gap: 24px;
-  align-items: start;
-  margin-top: 250px;
 }
-
-.collab-poster-wrap{
-  display: flex;
-  gap: 30px;
-  margin-top: 94px;
-}
-
-
-.collab-title-wrap{
+.collab-desc-text{ 
+  /* margin-left: 43px; */
+  margin-right: -119px;
+  margin-bottom: 50px;
+} 
+.collab-desc-text p{ 
+  float: right;
   text-align: right;
-  margin-top: 33px;
-  color: #fff;
+  font-size: 20px;
 }
-.collab-title-wrap span{
-  font-size: 30px;
+.collab-desc-text a{
+  border: 1px solid #333;
+  padding: 10px 30px;
   margin-top: 20px;
 }
-.collab-title-wrap h2{
-  font-size: 50px;
+.collab{
+  position: absolute;
 }
-
-.collab-bg{
-  position: absolute;top: -19%; left: -30%; z-index: -1;
+.collab-deco1{
+  top: 2%;
+  left: -23%;
 }
-.collab-desc-tex{
-  width: 1300px;
+.collab-deco2{
+  top: 88%;
+  right: -30%;
 }
-.collab-desc-text p{
-  float: right;
+.collab-deco3{
+  top: 72%;
+  left: -30%;
 }
 
 
